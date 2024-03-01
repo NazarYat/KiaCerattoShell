@@ -8,10 +8,24 @@
         Background="Black"
         Title="MainWindow" Height="450" Width="800">
     <DockPanel>
-        <DockPanel>
-            <Image Grid.Column="0" Grid.Row="0" Source="/Logo-white.png" Margin="200, 0, 200, 0"/>
-        </DockPanel>
-        <Grid Visibility="Collapsed">
+        <Border x:Name="LoadingScreen" HorizontalAlignment="Center" Width="10000">
+            <Image Source="/Logo-white.png" Width="400" HorizontalAlignment="Center">
+                <Image.Triggers>
+                    <EventTrigger RoutedEvent="Rectangle.Loaded">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation
+                                    Storyboard.TargetName="LoadingScreen" 
+                                    Storyboard.TargetProperty="Opacity"
+                                    From="1.0" To="0.0" Duration="0:0:0.5"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </Image.Triggers>
+            </Image>
+
+        </Border>
+        <Grid x:Name="MainMenu" Visibility="Collapsed">
 
         </Grid>
     </DockPanel>
