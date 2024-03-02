@@ -16,22 +16,11 @@ using System.Windows.Shapes;
 namespace KiaCerattoShell
 {
     /// <summary>
-    /// Interaction logic for Button.xaml
+    /// Interaction logic for MainMenu.xaml
     /// </summary>
-    public partial class Button : UserControl
+    public partial class MainMenu : UserControl
     {
-        public Action? Click { get; set; }
-        public ImageSource Source 
-        {
-            get => ButtonImage.Source;
-            set
-            {
-                if (value == ButtonImage.Source) return;
-
-                ButtonImage.Source = value;
-            }
-        }
-        public Button()
+        public MainMenu()
         {
             InitializeComponent();
         }

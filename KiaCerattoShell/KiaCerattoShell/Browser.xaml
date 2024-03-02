@@ -19,7 +19,7 @@
                     <local:Button Width="40"/>
                     <local:Button Width="40"/>
                 </StackPanel>
-                <TextBox Grid.Column="1" Background="#363636"/>
+                <TextBox Grid.Column="1" Background="#363636" />
             </Grid>
         </Border>
         <wv2:WebView2 Source="https://google.com" />

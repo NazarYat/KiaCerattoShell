@@ -23,12 +23,18 @@ namespace KiaCerattoShell
         public MainWindow()
         {
             InitializeComponent();
+
+            DataContext = new MainWindowViewModel();
         }
 
         private void DoubleAnimation_Completed(object sender, EventArgs e)
         {
-            MainMenu.Visibility = Visibility.Visible;
             LoadingScreen.Visibility = Visibility.Collapsed;
+
+            if (DataContext is MainWindowViewModel viewModel)
+            {
+                viewModel.LoadContent(new MainMenu());
+            }
         }
     }
 }
