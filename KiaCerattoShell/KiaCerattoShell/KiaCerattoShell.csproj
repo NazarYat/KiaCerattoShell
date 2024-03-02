@@ -8,11 +8,27 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="files-white.png" />
     <None Remove="Logo-white.png" />
+	<None Remove="radio-white.png" />
+	<None Remove="internet-white.png" />
+	<None Remove="music-white.png" />
+	<None Remove="navigator-white.png" />
+	<None Remove="settings-white.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.2415-prerelease" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="files-white.png" />
     <Resource Include="Logo-white.png" />
+    <Resource Include="radio-white.png" />
+	<Resource Include="internet-white.png" />
+	<Resource Include="music-white.png" />
+	<Resource Include="navigator-white.png" />
+	<Resource Include="settings-white.png" />
   </ItemGroup>
 
 </Project>

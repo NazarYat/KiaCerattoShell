@@ -16,19 +16,23 @@ using System.Windows.Shapes;
 namespace KiaCerattoShell
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for Button.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Button : UserControl
     {
-        public MainWindow()
+        public ImageSource Source 
+        {
+            get => ButtonImage.Source;
+            set
+            {
+                if (value == ButtonImage.Source) return;
+
+                ButtonImage.Source = value;
+            }
+        }
+        public Button()
         {
             InitializeComponent();
-        }
-
-        private void DoubleAnimation_Completed(object sender, EventArgs e)
-        {
-            MainMenu.Visibility = Visibility.Visible;
-            LoadingScreen.Visibility = Visibility.Collapsed;
         }
     }
 }

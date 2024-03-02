@@ -16,19 +16,13 @@ using System.Windows.Shapes;
 namespace KiaCerattoShell
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for Browser.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Browser : UserControl
     {
-        public MainWindow()
+        public Browser()
         {
             InitializeComponent();
-        }
-
-        private void DoubleAnimation_Completed(object sender, EventArgs e)
-        {
-            MainMenu.Visibility = Visibility.Visible;
-            LoadingScreen.Visibility = Visibility.Collapsed;
         }
     }
 }
